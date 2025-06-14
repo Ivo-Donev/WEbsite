@@ -1,7 +1,7 @@
 function checkPassword() {
     const input = document.getElementById('password').value;
     const errorMsg = document.getElementById('error');
-    const correctPassword = 'mishle';
+    const correctPassword = 'mishle1';
 
     if (input === correctPassword) {
         window.location.href = 'home.html';
