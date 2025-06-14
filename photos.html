@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Collage</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ❤️ Heart Loader -->
+<div id="loader">
+    <span class="heart">❤️</span>
+</div>
+
+<!-- 🧭 Navbar -->
+<nav class="navbar">
+    <div class="nav-center">
+        <a href="home.html">progress 🥂</a>
+        <a href="songs.html">Songs 🎵</a>
+        <a href="photos.html">Photos 📷</a>
+    </div>
+</nav>
+
+<!-- 🖼️ Collage Container -->
+<div id="collage" class="main-content hidden"></div>
+
+<script src="photos.js"></script>
+<script>
+    // Heart fade-out transition
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        loader.style.opacity = "0";
+        setTimeout(() => {
+            loader.style.display = "none";
+            document.querySelector(".main-content").classList.remove("hidden");
+            document.querySelector(".main-content").classList.add("fade-in");
+        }, 500);
+    });
+</script>
+</body>
+</html>

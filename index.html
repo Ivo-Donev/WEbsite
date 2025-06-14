@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ❤️ Heart Loader -->
+<div id="loader">
+    <span class="heart">❤️</span>
+</div>
+
+<div class="login-wrapper hidden main-content">
+    <form class="login-box" onsubmit="checkPassword(); return false;">
+        <input type="password" id="password" placeholder="Enter password" autocomplete="off" />
+        <button type="submit">Unlock 💘</button>
+        <p id="error" class="error"></p>
+    </form>
+</div>
+
+<script src="script.js"></script>
+<script>
+    // Enter key already handled by form submit
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        loader.style.opacity = "0";
+        setTimeout(() => {
+            loader.style.display = "none";
+            document.querySelector(".main-content").classList.remove("hidden");
+            document.querySelector(".main-content").classList.add("fade-in");
+        }, 500);
+    });
+</script>
+</body>
+</html>

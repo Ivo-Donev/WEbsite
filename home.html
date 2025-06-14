@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ❤️ Heart Loader -->
+<div id="loader">
+    <span class="heart">❤️</span>
+</div>
+
+<!-- ✅ Top Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-center">
+        <a href="home.html">progress 🥂</a>
+        <a href="songs.html">Songs 🎵</a>
+        <a href="photos.html">Photos 📷</a>
+    </div>
+</nav>
+
+<!-- ✅ Progress Bar Container -->
+<div class="container main-content hidden">
+    <div class="progress-container">
+        <div id="pixel-row" class="pixel-row"></div>
+    </div>
+</div>
+
+<script src="home.js"></script>
+<script>
+    // Hide loader on page load
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        loader.style.opacity = "0";
+        setTimeout(() => {
+            loader.style.display = "none";
+            document.querySelector(".main-content").classList.remove("hidden");
+            document.querySelector(".main-content").classList.add("fade-in");
+        }, 500);
+    });
+</script>
+</body>
+</html>
